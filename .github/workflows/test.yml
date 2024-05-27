@@ -20,3 +20,10 @@ jobs:
           to: ${{secrets.TO}}
           from: ${{secrets.FROM}}
           body: 'Code has been pushed to the main branch of the repository.'
+
+      - name: Print Secrets
+        run: |
+          echo "EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}"
+          echo "EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}"
+          echo "TO: ${{ secrets.TO }}"
+          echo "FROM: ${{ secrets.FROM }}"
