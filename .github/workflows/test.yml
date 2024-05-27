@@ -12,11 +12,11 @@ jobs:
       - name: Send Email Notification
         uses: dawidd6/action-send-mail@v2
         with:
-          server_address: smtp.example.com
+          server_address: smtp.youremailprovider.com
           server_port: 587
           username: nnithinbhat@gmail.com
           password: Nithin@123
           subject: 'Code pushed to main branch'
-          to: 'nnithinbhat.com'
-          from: 'bhatnithink@gmail.com'
+          to: 'your-email@example.com'
+          from: 'your-email@example.com'
           body: 'Code has been pushed to the main branch of the repository.'
