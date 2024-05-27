@@ -14,9 +14,9 @@ jobs:
         with:
           server_address: smtp.youremailprovider.com
           server_port: 587
-          username: nnithinbhat@gmail.com
-          password: Nithin@123
+          username: ${{secrets.}}
+          password: ${{secrets.}}
           subject: 'Code pushed to main branch'
-          to: 'nnithinbhat@gmail.com.com'
-          from: 'bhatnithink@gmail.com'
+          to: ${{secrets.
+          from: ${{secrets.
           body: 'Code has been pushed to the main branch of the repository.'
