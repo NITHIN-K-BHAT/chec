@@ -1,0 +1,22 @@
+name: Notify on Push to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  send_email_notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Email Notification
+        uses: dawidd6/action-send-mail@v2
+        with:
+          server_address: smtp.example.com
+          server_port: 587
+          username: nnithinbhat@gmail.com
+          password: Nithin@123
+          subject: 'Code pushed to main branch'
+          to: 'nnithinbhat.com'
+          from: 'bhatnithink@gmail.com'
+          body: 'Code has been pushed to the main branch of the repository.'
