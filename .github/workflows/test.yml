@@ -14,9 +14,9 @@ jobs:
         with:
           server_address: smtp.youremailprovider.com
           server_port: 587
-          username: ${{secrets.}}
-          password: ${{secrets.}}
+          username: ${{secrets.EMAIL_USERNAME}}
+          password: ${{secrets.EMAIL_PASSWORD}}
           subject: 'Code pushed to main branch'
-          to: ${{secrets.
-          from: ${{secrets.
+          to: ${{secrets.TO}}
+          from: ${{secrets.FROM}}
           body: 'Code has been pushed to the main branch of the repository.'
