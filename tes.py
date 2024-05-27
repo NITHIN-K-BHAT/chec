@@ -1,1 +1,1 @@
-print("h ey     ")
+print("h e  y     ")

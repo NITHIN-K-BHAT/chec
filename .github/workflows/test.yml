@@ -1,4 +1,4 @@
-name: Notify on Push to Main
+name: push notification
 
 on:
   push:
@@ -9,7 +9,7 @@ jobs:
   send_email_notification:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Email Notification
+      - name: Email Notification
         uses: dawidd6/action-send-mail@v2
         with:
 
