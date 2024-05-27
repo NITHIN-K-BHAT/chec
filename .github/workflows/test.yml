@@ -18,5 +18,5 @@ jobs:
           password: Nithin@123
           subject: 'Code pushed to main branch'
           to: 'nnithinbhat@gmail.com.com'
-          from: 'bhatnithink.com'
+          from: 'bhatnithink@gmail.com'
           body: 'Code has been pushed to the main branch of the repository.'
