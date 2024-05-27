@@ -12,11 +12,18 @@ jobs:
       - name: Send Email Notification
         uses: dawidd6/action-send-mail@v2
         with:
-          server_address: smtp.youremailprovider.com
-          server_port: 587
-          username: nnithinbhat@gmail.com
-          password: Nithin@123
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.EMAIL_USERNAME}}
+          password: ${{secrets.EMAIL_PASSWORD}}
           subject: 'Code pushed to main branch'
-          to: 'nnithinbhat@gmail.com.com'
-          from: 'bhatnithink@gmail.com'
+          to: ${{secrets.TO}}
+          from: ${{secrets.FROM}}
           body: 'Code has been pushed to the main branch of the repository.'
+
+      - name: Print Secrets
+        run: |
+          echo "EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}"
+          echo "EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}"
+          echo "TO: ${{ secrets.TO }}"
+          echo "FROM: ${{ secrets.FROM }}"
